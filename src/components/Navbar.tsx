@@ -1,13 +1,9 @@
 "use client";
-import { selectCartItemsCount } from '@/redux/cart-selector';
 import React from 'react'
-import { useSelector } from 'react-redux';
-import Cart from './Cart';
+import Cart from '@/components/Cart';
 
 export default function Navbar() {
 
-  // get the cart count 
-  const cart = useSelector(selectCartItemsCount);
   
   return (
 
