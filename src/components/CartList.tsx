@@ -10,7 +10,7 @@ interface CartListProps {
 export default function CartList({cartList} : CartListProps) {
     const dispatch = useDispatch();
   return (
-    <div className='space-y-8 px-6'>
+    <div className='space-y-8 px-1 md:px-6'>
         <div className="flex gap-4 justify-between items-start ">
             <div className="flex gap-x-3 items-start">
             <div className='shrink-0 relative w-12 h-12 ring-6 ring-slate-300'>
