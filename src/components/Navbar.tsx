@@ -12,7 +12,7 @@ export default function Navbar() {
        <h1 className='text-2xl font-extrabold sm:text-3xl'>
           Acme
        </h1>
-       <div className='bg-gray-400/[0.3] relative rounded-full p-3'>
+       <div className='bg-gray-400/[0.3] cursor-pointer relative rounded-full p-3'>
     <Cart />
        </div>
       </div>
