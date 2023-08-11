@@ -4,15 +4,17 @@ import { Fragment, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { selectCartItemsCount } from '@/redux/cart-selector';
 
-import { useDispatch, useSelector } from 'react-redux'
 import CartList from './CartList';
 import { formatNumber } from '@/lib/helper';
 import { removeAllItemsFromCart } from '@/redux/cart-slice';
+import { useAppDispatch, useAppSelector } from '@/hooks/redux-hook';
+
+
 export default function Cart() {
   const [open, setOpen] = useState(false)
   // get the cart count 
-  const cart = useSelector(selectCartItemsCount);
-  const dispatch = useDispatch();
+  const cart = useAppSelector(selectCartItemsCount);
+  const dispatch = useAppDispatch();
 
   // get the totalprice of all items listed in the cart
   const totalPrice = cart.cartItems.reduce((acc, currVal) => {
